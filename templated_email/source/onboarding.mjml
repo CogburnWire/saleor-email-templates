@@ -3,26 +3,21 @@
         <mj-include path="./shared/styles.mjml" />
     </mj-head>
     <mj-body>
-        <mj-raw>
-            {% load i18n %}
-        </mj-raw>
         <mj-include path="./shared/header.mjml" />
         <mj-section>
             <mj-column>
                 <mj-text font-size="16px">
-                    {% trans "Hi" context "Standard e-mail greeting" %} {{ first_name }},
+                    Hi {{ first_name }},
                 </mj-text>
                 <mj-text>
-                    {% blocktrans trimmed context "Marketplace invitation e-mail text" %}
                     The Farmers Feeding Utah Marketplace is open for business.
                     As a Touch of Utah subscriber, you have early access to shop.
-                    {% endblocktrans %}
                 </mj-text>
                 <mj-text>
                     Just click the link below, create a password and you're in!
                 </mj-text>
                 <mj-text>
-                    <a href="{{ onboarding_url | safe }}">
+                    <a href="{{onboarding_url}}">
                         Proceed to registration!
                     </a>
                 </mj-text>
